@@ -7,15 +7,15 @@ function App() {
 
   const handleLeftClick = () => {
     const newClicks = { 
+      ...clicks,    // ...clicks object get the value of clicks.left+1.  { ...clicks, right: clicks.right + 1 } creates a copy of the clicks object where the value of the right property is increased by one.
       left: clicks.left + 1, 
-      right: clicks.right 
     }
     setClicks(newClicks)
   }
 
   const handleRightClick = () => {
     const newClicks = { 
-      left: clicks.left, 
+      ...clicks, 
       right: clicks.right + 1 
     }
     setClicks(newClicks)
