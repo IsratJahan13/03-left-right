@@ -24,10 +24,9 @@ function App() {
     setTotal(left + updatedRight)
   }
 
-  const hello = () => {
+  const hello = (who) => {
     const handler = () => {
-      console.log('hello world')
-      setValue(0)
+      console.log('hello ', who)
     }
     return handler
   }
@@ -42,7 +41,9 @@ function App() {
       <p>total {total}</p>
       <hr></hr>
       {value}
-      <button onClick={hello()}>button</button>
+      <button onClick={hello('world')}>button</button>
+      <button onClick={hello('react')}>button</button>
+      <button onClick={hello('function')}>button</button>
     </div>
   )
 }
