@@ -24,11 +24,10 @@ function App() {
     setTotal(left + updatedRight)
   }
 
-  const hello = (who) => {
-    return () => {
+  const hello = (who) => () => {
       console.log('hello ', who)
     }
-  }
+  
 
   return (
     <div>
