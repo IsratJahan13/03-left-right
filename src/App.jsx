@@ -24,9 +24,12 @@ function App() {
     setTotal(left + updatedRight)
   }
 
-  const handleClick = () => {
-    console.log('clicked the button')
-    setValue(0)
+  const hello = () => {
+    const handler = () => {
+      console.log('hello world')
+      setValue(0)
+    }
+    return handler
   }
 
   return (
@@ -37,8 +40,9 @@ function App() {
       {right}
       <History allClicks = {allClicks} />
       <p>total {total}</p>
+      <hr></hr>
       {value}
-      <button onClick={handleClick}>button</button>
+      <button onClick={hello()}>button</button>
     </div>
   )
 }
