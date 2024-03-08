@@ -28,7 +28,7 @@ function App() {
       console.log('hello ', who)
     }
 
-    const setToValue = (newValue) => () => {
+    const setToValue = (newValue) => {
       console.log('value now', newValue)
       setValue(newValue)
     }
@@ -43,15 +43,14 @@ function App() {
       <History allClicks = {allClicks} />
       <p>total {total}</p>
       <hr></hr>
-      {value}
       <button onClick={hello('world')}>button</button>
       <button onClick={hello('react')}>button</button>
       <button onClick={hello('function')}>button</button>
       <hr></hr>
       {value}
-      <button onClick={setToValue(1000)}>thousand</button>
-      <button onClick={setToValue(0)}>reset</button>
-      <button onClick={setToValue(value + 1)}>increment</button>
+      <button onClick={() => setToValue(1000)}>thousand</button>
+      <button onClick={() => setToValue(0)}>reset</button>
+      <button onClick={() => setToValue(value + 1)}>increment</button>
 
     </div>
   )
